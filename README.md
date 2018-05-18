@@ -8,33 +8,33 @@
 
 ## Once installed run the following commands in order;
 
-Setup Commands
+### Setup Commands
 
 Open 2 console windows;
 
 console #1 run;
 
-  git clone https://github.com/eh7/EV_Charge.git 
+*  git clone https://github.com/eh7/EV_Charge.git 
 
-  cd EV_Charge/
+*  cd EV_Charge/
 
-  npm install
+*  npm install
 
 console #2 run;
 
-  truffle develop
+*  truffle develop
 
 back to console #1 run;
 
-  truffle test test/set_dev_chain.js
+*  truffle test test/set_dev_chain.js
 
-  node charge.js
+*  node charge.js
 
-Then in browser go to url return from running "node charge.js", default url is;
+#### Then in browser go to url return from running "node charge.js", default url is;
 
- http://localhost:8284
+* http://localhost:8284
  
-After running the "node charge.js" command you will also see a list of addresses to test the web front end out.
+#### After running the "node charge.js" command you will also see a list of addresses to test the web front end out.
 
 Any question or problems, let me know;
 
