@@ -50,17 +50,17 @@ At Share&Charge we are developing an e-mobility charging platform and associated
 
 For this challenge you are tasked with developing a key feature of the platform, a web component  that enables an EV driver to explore their charging history.
 
-Story
+#### Story
 As an EV driver 
 I want to be able to review my entire charging history 
 So that I can determine the overall costs involved
 
-Acceptance Criteria
-I want to see a maximum of 10 items per page
-I want the ability to page backwards and forwards 10 pages at a time 
-I want to see for each history item the date & time of the charge
-I want to see for each history item the duration of the charge
-I want to see for each history item the total costs calculated as 1.00 per hour
+### Acceptance Criteria
+* I want to see a maximum of 10 items per page
+* I want the ability to page backwards and forwards 10 pages at a time 
+* I want to see for each history item the date & time of the charge
+* I want to see for each history item the duration of the charge
+* I want to see for each history item the total costs calculated as 1.00 per hour
 All history is stored in a decentralized fashion on the block chain, how it is stored and retrieved is left up to the developer.
 
 The aim of the exercise is to showcase tools, framework, patterns and practices of developing Ethereum based web solutions… e.g. use of Web3.js and TDD.
