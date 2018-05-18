@@ -1,12 +1,12 @@
-EV_Charge Decentralised Data Store and Web Application
+# EV_Charge Decentralised Data Store and Web Application
 
 
-To run on your local computer you will need the following.
+## To run on your local computer you will need the following.
 
 See: https://nodejs.org/en/ 
 See: http://truffleframework.com/
 
-Once installed run the following commands in order;
+## Once installed run the following commands in order;
 
 Setup Commands
 
@@ -42,9 +42,9 @@ Gavin. (http://eh7.co.uk)  :)
 
 
 -----------
-The Problem
+### The Problem
 
-Share&Charge coding challenge
+## Share&Charge coding challenge
 
 At Share&Charge we are developing an e-mobility charging platform and associated software components to enable a more seamless and enjoyable end user experience for electric vehicle users and better integration between e-mobility providers and charging pole operators.
 
