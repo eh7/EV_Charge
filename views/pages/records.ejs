@@ -1,0 +1,77 @@
+<%- include includes.ejs %>
+<body>
+
+<div class="main">
+
+<%- include logo_text.ejs %>
+
+<div class="logout">
+<a href="/">Logout</a>
+</div>
+
+<table id="records" class="cell-border hover" style="width:100%">
+  <thead>
+   <tr>
+    <th>address</th>
+    <th>id</th>
+    <th>timestamp</th>
+    <th>date</th>
+    <th>time</th>
+    <th>duration</th>
+    <th>cost</th>
+   </tr>
+  </thead>
+  <tbody>
+<% for(i=0;i<events.length;i++) { %>
+    <tr>
+      <td>
+<% var outAddress = String(JSON.stringify(events[i].address)).replace(/^"|"$/g,''); %>
+<%= outAddress %>
+      </td>
+      <td>
+<%= JSON.stringify(events[i].count); %>
+      </td>
+      <td>
+<%= JSON.stringify(events[i].timestamp); %>
+      </td>
+      <td>
+<% 
+  var date    = new Date(events[i].timestamp*1000);
+  var hours   = date.getHours();
+  var minutes = date.getMinutes();
+  var seconds = date.getSeconds();
+  var full_date    = date.getDate();
+%>
+<%= date %>
+      </td>
+      <td>
+<%= hours %>:<%= minutes %>:<%= seconds %>
+      </td>
+      <td>
+<%= JSON.stringify(events[i].duration); %>
+      </td>
+      <td>
+<% var rate = (1.00 / 60); %>
+<% var cost = (events[i].duration * rate) %>
+<%= cost.toFixed(2) %>
+      </td>
+    </tr>
+<% } %>
+  </tbody>
+<tfoot>
+<tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+</tfoot>
+</table>
+
+</div>
+
+</body>
+</html>

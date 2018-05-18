@@ -1,0 +1,36 @@
+<%- include includes.ejs %>
+<body>
+
+<div class="main">
+
+<%- include logo_text.ejs %>
+
+  <% if(error) { %><h3 style="float:right;"><%= error %></h3><% } %>
+
+  <br clear='all'>
+
+  <h5 class="motionwerk_blue">Enter your Address to View Records</h5>
+
+  <label for="exampleFormControlInput1">EV Charge Address</label>
+
+  <form method="POST">
+
+  <div class="form-group">
+
+    <input type="text" name="address" value="<%= address %>" class="form-control" id="exampleFormControlInput1" placeholder="0x2191ef87e392377ec08e7c08eb105ef5448eced5">
+
+  </div>
+
+  <div class="form-group">
+
+  <button type="submit" class="btn btn-outline-warning">submit</button>
+
+  </div>
+
+  </form>
+
+</div>
+
+</body>
+
+</html>

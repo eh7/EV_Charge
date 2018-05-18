@@ -1,0 +1,39 @@
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif,;
+  text-align; center;
+}
+
+.main {
+  font-size: 0.9em;
+  margin: auto;
+  width: 90%;
+}
+
+.motionwerk_logo {
+  float:right;
+}
+
+.motionwerk_line {
+  position:absolute;
+  top: 70px;
+  height:5px;
+  width:335px;
+  background-color: #ffe500;
+}
+
+.logout {
+  padding:80px 50px 10px 0;
+}
+
+.motionwerk_blue {
+  color: #2c2d87;
+}
+
+.heading {
+  padding-bottom: 1em;
+  float:left;
+  color: #2c2d87;
+}
+
+.table thead,
+.table th {text-align: left;}
