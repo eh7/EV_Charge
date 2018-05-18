@@ -12,13 +12,13 @@
 <table id="records" class="cell-border hover" style="width:100%">
   <thead>
    <tr>
-    <th>address</th>
-    <th>id</th>
-    <th>timestamp</th>
-    <th>date</th>
-    <th>time</th>
-    <th>duration</th>
-    <th>cost</th>
+    <th>Id</th>
+    <th>Address</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Timestamp</th>
+    <th>Duration</th>
+    <th>Cost</th>
    </tr>
   </thead>
   <tbody>
@@ -37,10 +37,14 @@
       <td>
 <% 
   var date    = new Date(events[i].timestamp*1000);
+//  var this_date = date.format("hh:mm:ss tt");
   var hours   = date.getHours();
   var minutes = date.getMinutes();
   var seconds = date.getSeconds();
   var full_date    = date.getDate();
+  if(String(hours).length == 1) hours = "0" + String(hours);
+  if(String(minutes).length == 1) minutes = "0" + String(minutes);
+  if(String(seconds).length == 1) seconds = "0" + String(seconds);
 %>
 <%= date %>
       </td>
@@ -52,7 +56,7 @@
       </td>
       <td>
 <% var rate = (1.00 / 60); %>
-<% var cost = (events[i].duration * rate) %>
+&euro; <% var cost = (events[i].duration * rate) %>
 <%= cost.toFixed(2) %>
       </td>
     </tr>

@@ -6,7 +6,7 @@ var fs          = require('fs');
 var Promise     = require('promise');
 var morgan      = require('morgan');
 
-var config      = require('./config'); // get our config file
+var config      = require('./config'); 
 
 var Web3  = require("web3");
 var web3 = new Web3();
@@ -117,7 +117,13 @@ app.use(function (req, res, next) {
 });
 
 
-app.listen(port,host, () => console.log('Listening on port http://' + host + ":" + port + '!'));
+app.listen(port,host, () => {
+  console.log('Listening on port http://' + host + ":" + port + '!');
+  console.log('Address with records: ' + config.accounts[0]);
+  console.log('Address with records: ' + config.accounts[1]);
+  for(i=2;i<config.accounts.length-2;i++)
+    console.log('Address with NO records: ' + config.accounts[i]);
+});
 
 app.get('/', (req, res) => res.redirect(301, '/ChargeRecords'));
 

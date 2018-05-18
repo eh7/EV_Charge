@@ -1,5 +1,6 @@
 var Charge = artifacts.require("Charge");
 
+var fs             = require('fs');
 var ethereumjs_abi = require('ethereumjs-abi');
 
 console.log(Charge.address);
@@ -116,7 +117,55 @@ contract('Charge', function(accounts) {
 //        console.log(results[i].args)
       }
       console.log("Contract Address: " + thisInstance.address);
-      done();
+//      console.log("Contract Address: " + JSON.stringify(thisInstance.abi));
+
+      var fileName = '../config.js';
+
+      var config = require(fileName);
+
+      var fileNameNew = './config.js';
+
+      var newAbi     = thisInstance.abi;
+
+      var newAddress = thisInstance.address;
+
+//      console.log(thisInstance.address + " -- " + newAddress);
+
+      config.contract_address = newAddress;
+
+      config.contract_abi = newAbi;
+
+      config.accounts = accounts;
+
+      var newConfig  = "module.exports = " + JSON.stringify(config) + ";";
+
+//      console.log(newConfig);
+
+      fs.writeFile(fileNameNew, newConfig, function (err) {
+
+        if (err) return console.log(err);
+
+//        console.log(JSON.stringify(newConfig));
+
+        console.log('writing to ' + fileNameNew);
+
+        done();
+
+      });
+
+/*
+      config.contract_address = thisInstance.address;
+      config.contract_abi = JSON.stringify(thisInstance.abi);
+      var newConfig  = "module.exports = " + JSON.stringify(config) + ";";
+      console.log(newConfig);
+
+      fs.writeFile(fileNameNew, newConfig, function (err) {
+        if (err) return console.log(err);
+        console.log(JSON.stringify(config));
+        console.log('writing to ' + fileName);
+        done();
+      });
+*/
     })
   });
 
