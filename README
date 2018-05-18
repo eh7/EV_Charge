@@ -1,5 +1,6 @@
 EV_Charge Decentralised Data Store and Web Application
 
+
 To run on your local computer you will need the following.
 
 See: https://nodejs.org/en/ 
@@ -35,12 +36,9 @@ Then in browser go to url return from running "node charge.js", default url is;
  
 After running the "node charge.js" command you will also see a list of addresses to test the web front end out.
 
-Any question or problems, get me at;
+Any question or problems, let me know;
 
-  e: gav@eh7.co.uk 
-  t: +44 (0)7792 543 103
-
-Enjoy.  :)
+Gavin. (http://eh7.co.uk)  :)
 
 
 -----------
