@@ -3,8 +3,8 @@
 
 ## To run on your local computer you will need the following.
 
-See: https://nodejs.org/en/ 
-See: http://truffleframework.com/
+* See: https://nodejs.org/en/ 
+* See: http://truffleframework.com/
 
 ## Once installed run the following commands in order;
 
